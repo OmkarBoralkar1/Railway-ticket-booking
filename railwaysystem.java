@@ -2,7 +2,8 @@ import java.util.*;
 public class railwaysystem {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("ENTER THE Number of passengers");
+         System.out.println("ENTER THE Number of passengers");
+         //System.out.println("put  Number of passengers as 1");
         int n;
        
         // input
@@ -25,7 +26,7 @@ public class railwaysystem {
         double[]g=new double[10];
         n=sc.nextInt();
         for(int i=0;i<n;i++){
-            System.out.println("ENTER THE Number of seat/berth for passenger"+(i+1));
+            System.out.println("ENTER THE Number of seat/berth for passenger");
             int c=sc.nextInt();
             //String Q=Integer.toString(c);
             //a[i]=new String(Q);
@@ -55,14 +56,15 @@ public class railwaysystem {
             q[i]=sc.next();
             System.out.println("Please mentioned the given type and coach as given below without bracket");
             System.out.println("Enter the train category");
-            System.out.println("preminum(Rjdhani,shatabdi,duronto,Vande bharat),superfast(Humsuffar/ACExpress)");
+            System.out.println(" 1 for preminum(Rjdhani,shatabdi,duronto,Vande bharat)");
+            System.out.println(" 2 for Superfast(Humsuffar/ACExpress)");
             b[i]=sc.next();
             System.out.println("Enter The type of coach");
             System.out.println("3Tire ,2Tire, 1Tire, ACChairCar,Sitting(2s),ExecitiveChairCar,Vistadome,Anubhuti,Sleeper");
             d[i]=sc.next();
             String str1,str2,str4,str5,str6,str7,str8,str9,str10,str11,str12;
-            str1="preminum";
-            str2="superfast";
+            str1="1";
+            str2="2";
             str4="3Tire";
             str5="2Tire";
             str6="1Tire";
@@ -310,24 +312,24 @@ public class railwaysystem {
                 else if(d[i].equals(str12)){
                     l[i]=(c*0.75*u[i]);
                 }
-            
-            if(b[i].equals(str2)){
+           }
+           else if(b[i].equals(str2)){
                 if (d[i].equals(str4)){  
                     l[i]=(c*1.45*u[i]);
                 }
-                if (d[i].equals(str5)){  
+                else if (d[i].equals(str5)){  
                     l[i]=(c*2.00*u[i]);
                 }
-                if (d[i].equals(str6)){  
+                else if (d[i].equals(str6)){  
                     l[i]=(c*2.65*u[i]);
                 }
-                if (d[i].equals(str7)){  
+                else if (d[i].equals(str7)){  
                     l[i]=(c*1.25*u[i]);
                 }
-                if (d[i].equals(str11)){  
+                else if (d[i].equals(str11)){  
                     l[i]=(c*0.65*u[i]);
                 }
-                if (d[i].equals(str12)){  
+                else if (d[i].equals(str12)){  
                     l[i]=(c*0.45*u[i]);
                 }
 
@@ -421,9 +423,9 @@ public class railwaysystem {
                     x[r+1]=x[r]+1;
                 }
             }
+          }
         }
-            }
-        else if(b[i]==str2){
+        else if(b[i].equals(str2)){
             if(d[i].equals(str4)){
                 for(int w=0;w<1;w++){
                     a[w]=(int)((Math.random()*4)+1);
@@ -433,7 +435,7 @@ public class railwaysystem {
                     }
                 }
             }
-            if(d[i].equals(str5)){
+            else if(d[i].equals(str5)){
                 for(int w=0;w<1;w++){
                     a[w]=(int)((Math.random()*3)+1);
                     x[w]=(int)((Math.random()*60)+1);
@@ -442,7 +444,7 @@ public class railwaysystem {
                     }
                 }
             } 
-            if(d[i].equals(str6)){
+            else if(d[i].equals(str6)){
                 for(int w=0;w<1;w++){
                     a[w]=(int)((Math.random()*1)+1);
                     if(a[w]%2==0 && c>2){
@@ -459,7 +461,7 @@ public class railwaysystem {
                     }
                 }
             }
-            if(d[i].equals(str7)){
+            else if(d[i].equals(str7)){
                 for(int w=0;w<1;w++){
                     a[w]=(int)((Math.random()*3)+1);
                     x[w]=(int)((Math.random()*70)+1);
@@ -468,7 +470,7 @@ public class railwaysystem {
                     }
                 }
             }
-            if(d[i].equals(str9)){
+            else if(d[i].equals(str9)){
                 for(int w=0;w<1;w++){
                     a[w]=(int)((Math.random()*1)+1);
                     x[w]=(int)((Math.random()*55)+1);
@@ -477,7 +479,7 @@ public class railwaysystem {
                     }
                 }
             }
-            if(d[i].equals(str11)){
+            else if(d[i].equals(str11)){
                 for(int w=0;w<1;w++){
                     a[w]=(int)((Math.random()*10)+1);
                     x[w]=(int)((Math.random()*72)+1);
@@ -495,6 +497,9 @@ public class railwaysystem {
                     }
                 }
             }    
+        }
+        else{
+            continue;
         }
             for(int r=0;r<c;r++){
                 System.out.println("The Information of passenger"+(i+1));
@@ -557,7 +562,6 @@ public class railwaysystem {
             System.out.println("Date of journey is"+q[i]);
             System.out.println("Total fare is including gst "+l[i]);
             
-        }
     }
     sc.close();
 }
