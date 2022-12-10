@@ -58,7 +58,7 @@ public class railwaysystem {
             System.out.println("preminum(Rjdhani,shatabdi,duronto,Vande bharat),superfast(Humsuffar/ACExpress)");
             b[i]=sc.next();
             System.out.println("Enter The type of coach");
-            System.out.println("3Tire ,2Tire, 1Tire, AC ChairCar,Sitting(2s),ExecitiveChairCar,Vistadome,Anubhuti,Sleper");
+            System.out.println("3Tire ,2Tire, 1Tire, ACChairCar,Sitting(2s),ExecitiveChairCar,Vistadome,Anubhuti,Sleeper");
             d[i]=sc.next();
             String str1,str2,str4,str5,str6,str7,str8,str9,str10,str11,str12;
             str1="preminum";
@@ -66,11 +66,11 @@ public class railwaysystem {
             str4="3Tire";
             str5="2Tire";
             str6="1Tire";
-            str7="AC ChairCar";
+            str7="ACChairCar";
             str8="ExecitiveChairCar";
             str9="Vistadome";
             str10="Anubhuti";
-            str11="Sleper";
+            str11="Sleeper";
             str12="Sitting";
            if(b[i].equals(str1)){
                 System.out.println("Want catering service 1) For yes 2)No");
@@ -280,10 +280,37 @@ public class railwaysystem {
                         l[i]=(c*2*u[i]);
                     }
                 }
+                else if(d[i].equals(str11)){
+                    if(e[i]==1){
+                            System.out.println("The dist in km"+u[i]);
+                            if(100>u[i]&&u[i]<500){
+                                System.out.println("1 for breakfast/Snaks for day");
+                                System.out.println("2 for lunch/dinner for night");
+                                g[i]=sc.nextInt();
+                                if (g[i]==1){
+                                l[i]=(c*80)+(c*1.5*u[i]);//for snaks
+                                System.out.println("The fare is"+l[i]); 
+                            }
+                                else if(g[i]==2){
+        
+                                l[i]=c*160+(c*1.5*u[i]);//for dinner
+                                System.out.println("The fare is"+l[i]);
+                                }
+                            }
+                            else if(1000>u[i]&&u[i]>500){
+                                l[i]=(c*240)+(c*1.5*u[i]);//for snaks and dinner
+                                System.out.println("The fare is"+l[i]);
+                            }
+                            
+                        }
+                        else{
+                            l[i]=(c*1.5*u[i]);
+                        }
+                }
                 else if(d[i].equals(str12)){
                     l[i]=(c*0.75*u[i]);
                 }
-            }
+            
             if(b[i].equals(str2)){
                 if (d[i].equals(str4)){  
                     l[i]=(c*1.45*u[i]);
@@ -324,8 +351,151 @@ public class railwaysystem {
                 }
             }
         }
-
+        if(d[i].equals(str6)){
+            for(int w=0;w<1;w++){
+                a[w]=(int)((Math.random()*1)+1);
+                if(a[w]%2==0 && c>2){
+                x[w]=(int)((Math.random()*4)+1);
+                for(int r=0;r<c-1;r++){
+                    x[r+1]=x[r]+1;
+                }
             }
+                else if (c<2){
+                x[w]=(int)((Math.random()*2)+1);
+                for(int r=0;r<c-1;r++){
+                    x[r+1]=x[r]+1;
+                }
+                }
+            }
+        }
+        if(d[i].equals(str7)){
+            for(int w=0;w<1;w++){
+                a[w]=(int)((Math.random()*8)+1);
+                x[w]=(int)((Math.random()*70)+1);
+                for(int r=0;r<c-1;r++){
+                    x[r+1]=x[r]+1;
+                }
+            }
+        }
+        if(d[i].equals(str8)){
+            for(int w=0;w<1;w++){
+                a[w]=(int)((Math.random()*3)+1);
+                x[w]=(int)((Math.random()*60)+1);
+                for(int r=0;r<c-1;r++){
+                    x[r+1]=x[r]+1;
+                }
+            }
+        }
+        if(d[i].equals(str9)){
+            for(int w=0;w<1;w++){
+                a[w]=(int)((Math.random()*2)+1);
+                x[w]=(int)((Math.random()*55)+1);
+                for(int r=0;r<c-1;r++){
+                    x[r+1]=x[r]+1;
+                }
+            }
+        }
+        if(d[i].equals(str10)){
+            for(int w=0;w<1;w++){
+                a[w]=(int)((Math.random()*1)+1);
+                x[w]=(int)((Math.random()*55)+1);
+                for(int r=0;r<c-1;r++){
+                    x[r+1]=x[r]+1;
+                }
+            }
+        }
+        if(d[i].equals(str11)){
+            for(int w=0;w<1;w++){
+                a[w]=(int)((Math.random()*6)+1);
+                x[w]=(int)((Math.random()*72)+1);
+                for(int r=0;r<c-1;r++){
+                    x[r+1]=x[r]+1;
+                }
+            }
+        }
+        if(d[i].equals(str12)){
+            for(int w=0;w<1;w++){
+                a[w]=(int)((Math.random()*1)+1);
+                x[w]=(int)((Math.random()*100)+1);
+                for(int r=0;r<c-1;r++){
+                    x[r+1]=x[r]+1;
+                }
+            }
+        }
+            }
+        else if(b[i]==str2){
+            if(d[i].equals(str4)){
+                for(int w=0;w<1;w++){
+                    a[w]=(int)((Math.random()*4)+1);
+                    x[w]=(int)((Math.random()*70)+1);
+                    for(int r=0;r<c-1;r++){
+                        x[r+1]=x[r]+1;
+                    }
+                }
+            }
+            if(d[i].equals(str5)){
+                for(int w=0;w<1;w++){
+                    a[w]=(int)((Math.random()*3)+1);
+                    x[w]=(int)((Math.random()*60)+1);
+                    for(int r=0;r<c-1;r++){
+                        x[r+1]=x[r]+1;
+                    }
+                }
+            } 
+            if(d[i].equals(str6)){
+                for(int w=0;w<1;w++){
+                    a[w]=(int)((Math.random()*1)+1);
+                    if(a[w]%2==0 && c>2){
+                    x[w]=(int)((Math.random()*4)+1);
+                    for(int r=0;r<c-1;r++){
+                        x[r+1]=x[r]+1;
+                    }
+                }
+                    else if (c<2){
+                    x[w]=(int)((Math.random()*2)+1);
+                    for(int r=0;r<c-1;r++){
+                        x[r+1]=x[r]+1;
+                    }
+                    }
+                }
+            }
+            if(d[i].equals(str7)){
+                for(int w=0;w<1;w++){
+                    a[w]=(int)((Math.random()*3)+1);
+                    x[w]=(int)((Math.random()*70)+1);
+                    for(int r=0;r<c-1;r++){
+                        x[r+1]=x[r]+1;
+                    }
+                }
+            }
+            if(d[i].equals(str9)){
+                for(int w=0;w<1;w++){
+                    a[w]=(int)((Math.random()*1)+1);
+                    x[w]=(int)((Math.random()*55)+1);
+                    for(int r=0;r<c-1;r++){
+                        x[r+1]=x[r]+1;
+                    }
+                }
+            }
+            if(d[i].equals(str11)){
+                for(int w=0;w<1;w++){
+                    a[w]=(int)((Math.random()*10)+1);
+                    x[w]=(int)((Math.random()*72)+1);
+                    for(int r=0;r<c-1;r++){
+                        x[r+1]=x[r]+1;
+                    }
+                }
+            }
+            if(d[i].equals(str12)){
+                for(int w=0;w<1;w++){
+                    a[w]=(int)((Math.random()*10)+1);
+                    x[w]=(int)((Math.random()*108)+1);
+                    for(int r=0;r<c-1;r++){
+                        x[r+1]=x[r]+1;
+                    }
+                }
+            }    
+        }
             for(int r=0;r<c;r++){
                 System.out.println("The Information of passenger"+(i+1));
                 System.out.println("name" +o[r]);
@@ -341,18 +511,55 @@ public class railwaysystem {
                     System.out.println("A"+a[i]);
                     System.out.println("Seat"+x[r]);
                 }
+                if(d[i].equals(str6)){
+                    System.out.println("Your seat is alloted");
+                    System.out.println("H"+a[i]);
+                    System.out.println("Seat"+x[r]);
+                }
+                if(d[i].equals(str7)){
+                    System.out.println("Your seat is alloted");
+                    System.out.println("C"+a[i]);
+                    System.out.println("Seat"+x[r]);
+                }
+                if(d[i].equals(str8)){
+                    System.out.println("Your seat is alloted");
+                    System.out.println("EXC"+a[i]);
+                    System.out.println("Seat"+x[r]);
+                }
+                if(d[i].equals(str9)){
+                    System.out.println("Your seat is alloted");
+                    System.out.println("E"+a[i]);
+                    System.out.println("Seat"+x[r]);
+                }
+                if(d[i].equals(str10)){
+                    System.out.println("Your seat is alloted");
+                    System.out.println("ANU"+a[i]);
+                    System.out.println("Seat"+x[r]);
+                }
+                if(d[i].equals(str11)){
+                    System.out.println("Your seat is alloted");
+                    System.out.println("S"+a[i]);
+                    System.out.println("Seat"+x[r]);
+                }
+                if(d[i].equals(str12)){
+                    System.out.println("Your seat is alloted");
+                    System.out.println("D"+a[i]);
+                    System.out.println("Seat"+x[r]);
+                }
             }
-            System.out.println(y[i]);
-            System.out.println(z[i]);
-            System.out.println(u[i]);
-            System.out.println(s[i]);
-            System.out.println(f[i]);
-            System.out.println(b[i]);
-            System.out.println(d[i]);
+            System.out.println("  Source  "+y[i]);
+            System.out.println("  Destination  "+z[i]);
+            System.out.println(" Distance "+u[i]+"KM");
+            System.out.println(" Train no "+s[i]);
+            System.out.println("  Train name "+f[i]);
+            System.out.println("  Train Category "+b[i]);
+            System.out.println("   Coach Type   "+d[i]);
             System.out.println("Date of journey is"+q[i]);
             System.out.println("Total fare is including gst "+l[i]);
             
         }
-    sc.close();
     }
+    sc.close();
+}
+
 }
