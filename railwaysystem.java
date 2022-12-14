@@ -39,7 +39,7 @@ public class railwaysystem {
                 System.out.println("ENTER THE age of the passenger");
                 p[j]=sc.nextInt();
                 System.out.println("ENTER THE gender of the passenger");
-                System.out.println("Male/Female/T");
+                System.out.println("Male /Female/T");
                 t[j]=sc.next();
             }
             System.out.println("Enter the source");
@@ -565,8 +565,40 @@ public class railwaysystem {
             System.out.println(" Distance "+u[i]+"KM");
             System.out.println(" Train no "+s[i]);
             System.out.println("  Train name "+f[i]);
-            System.out.println("  Train Category "+b[i]);
-            System.out.println("   Coach Type   "+d[i]);
+            if(b[i].equals(str1)){
+                System.out.println("  Train Category "+b[i]+"preminum");
+            }
+            else{
+                System.out.println("  Train Category "+b[i]+"superfast");
+            } 
+            if(d[i].equals(str4)){
+                System.out.println("   Coach Type   "+d[i]+"3Tire");
+            }
+            if(d[i].equals(str5)){
+                System.out.println("   Coach Type   "+d[i]+"2Tire");
+            }
+            if(d[i].equals(str6)){
+                System.out.println("   Coach Type   "+d[i]+"1Tire");
+            }
+            if(d[i].equals(str7)){
+                System.out.println("   Coach Type   "+d[i]+"ACChairCar");
+            }
+            if(d[i].equals(str8)){
+                System.out.println("   Coach Type   "+d[i]+"ExecitiveChairCar");
+            }
+            if(d[i].equals(str9)){
+                System.out.println("   Coach Type   "+d[i]+" Vistadome");
+            }
+            if(d[i].equals(str10)){
+                System.out.println("   Coach Type   "+d[i]+"Anubhuti");
+            }
+            if(d[i].equals(str11)){
+                System.out.println("   Coach Type   "+d[i]+"Sleeper");
+            }
+            if(d[i].equals(str12)){
+                System.out.println("   Coach Type   "+d[i]+" Second Sitting");
+            }
+            
             System.out.println("Date of journey is"+q[i]);
             System.out.println("Total fare is including gst "+l[i]);
             
