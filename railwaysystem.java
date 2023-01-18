@@ -5,8 +5,6 @@ public class railwaysystem {
          System.out.println("ENTER THE Number of passengers");
          //System.out.println("put  Number of passengers as 1");
         int n;
-       
-        // input
         double[]a=new double[10];
         String[]o=new String[10];
         double[]s=new double[10];
@@ -28,11 +26,6 @@ public class railwaysystem {
         for(int i=0;i<n;i++){
             System.out.println("ENTER THE Number of seat/berth for passenger");
             int c=sc.nextInt();
-            //String Q=Integer.toString(c);
-            //a[i]=new String(Q);
-            //int we=a[i].length();
-            //double c=sc.nextInt();
-             //a[i]=new String(c);
             for(int j=0;j<c;j++){
                 System.out.println("ENTER THE name of the passenger");
                 o[j]=sc.next();
@@ -82,13 +75,14 @@ public class railwaysystem {
             str10="10";
             str11="11";
             str12="12";
+            //fare chat of  preminum trains
            if(b[i].equals(str1)){
                 System.out.println("Want catering service 1) For yes 2)No");
                 e[i]=sc.nextInt();
                 if (d[i].equals(str4)){
                 if(e[i]==1){
                         System.out.println("The dist in km"+u[i]);
-                    if(100>u[i]&&u[i]<500){
+                    if(100<u[i]&&u[i]<500){
                         System.out.println("1 for breakfast/Snaks for day");
                         System.out.println("2 for lunch/dinner for night");
                         g[i]=sc.nextInt();
@@ -121,7 +115,7 @@ public class railwaysystem {
                 else if(d[i].equals(str5)) {
                 if(e[i]==1){
                     System.out.println("The dist in km"+u[i]);
-                    if(100>u[i]&&u[i]<500){
+                    if(100<u[i]&&u[i]<500){
                         System.out.println("1 for breakfast/Snaks for day");
                         System.out.println("2 for lunch/dinner for night");
                         g[i]=sc.nextInt();
@@ -153,7 +147,7 @@ public class railwaysystem {
                 else if(d[i].equals(str6)){
                 if(e[i]==1){
                     System.out.println("The dist in km"+u[i]);
-                    if(100>u[i]&&u[i]<500){
+                    if(100<u[i]&&u[i]<500){
                         System.out.println("1 for breakfast/Snaks for day");
                         System.out.println("2 for lunch/dinner for night");
                         g[i]=sc.nextInt();
@@ -185,7 +179,7 @@ public class railwaysystem {
                 else if(d[i].equals(str7)){
                 if(e[i]==1){
                     System.out.println("The dist in km"+u[i]);
-                    if(100>u[i]&&u[i]<500){
+                    if(100<u[i]&&u[i]<500){
                         System.out.println("1 for breakfast/Snaks for day");
                         System.out.println("2 for lunch/dinner for night");
                         g[i]=sc.nextInt();
@@ -211,7 +205,7 @@ public class railwaysystem {
                 else if(d[i].equals(str8)){
                 if(e[i]==1){
                     System.out.println("The dist in km"+u[i]);
-                    if(100>u[i]&&u[i]<500){
+                    if(100<u[i]&&u[i]<500){
                         System.out.println("1 for breakfast/Snaks for day");
                         System.out.println("2 for lunch/dinner for night");
                         g[i]=sc.nextInt();
@@ -239,7 +233,7 @@ public class railwaysystem {
                 else if(d[i].equals(str9)){
                 if(e[i]==1){
                     System.out.println("The dist in km"+u[i]);
-                    if(100>u[i]&&u[i]<500){
+                    if(100<u[i]&&u[i]<500){
                         System.out.println("1 for breakfast/Snaks for day");
                         System.out.println("2 for lunch/dinner for night");
                         g[i]=sc.nextInt();
@@ -266,7 +260,7 @@ public class railwaysystem {
                 else if(d[i].equals(str10)){
                     if(e[i]==1){
                         System.out.println("The dist in km"+u[i]);
-                        if(100>u[i]&&u[i]<500){
+                        if(100<u[i]&&u[i]<500){
                             System.out.println("1 for breakfast/Snaks for day");
                             System.out.println("2 for lunch/dinner for night");
                             g[i]=sc.nextInt();
@@ -293,17 +287,17 @@ public class railwaysystem {
                 else if(d[i].equals(str11)){
                     if(e[i]==1){
                             System.out.println("The dist in km"+u[i]);
-                            if(100>u[i]&&u[i]<500){
+                            if(100<u[i]&&u[i]<500){
                                 System.out.println("1 for breakfast/Snaks for day");
                                 System.out.println("2 for lunch/dinner for night");
                                 g[i]=sc.nextInt();
                                 if (g[i]==1){
-                                l[i]=(c*80)+(c*1.5*u[i]);//for snaks
+                                l[i]=(c*80)+(c*1.5*u[i]);
                                 System.out.println("The fare is"+l[i]); 
                             }
                                 else if(g[i]==2){
         
-                                l[i]=c*160+(c*1.5*u[i]);//for dinner
+                                l[i]=c*160+(c*1.5*u[i]);
                                 System.out.println("The fare is"+l[i]);
                                 }
                             }
@@ -321,6 +315,7 @@ public class railwaysystem {
                     l[i]=(c*0.75*u[i]);
                 }
            }
+           //fare chat of superfast express
            else if(b[i].equals(str2)){
                 if (d[i].equals(str4)){  
                     l[i]=(c*1.45*u[i]);
@@ -338,7 +333,7 @@ public class railwaysystem {
                     l[i]=(c*0.65*u[i]);
                 }
                 else if (d[i].equals(str12)){  
-                    l[i]=(c*0.45*u[i]);
+                    l[i]=(c*0.35*u[i]);
                 }
 
             }
@@ -511,23 +506,23 @@ public class railwaysystem {
         }
             for(int r=0;r<c;r++){
                 System.out.println("The Information of passenger"+(i+1));
-                System.out.println("name" +o[r]);
-                System.out.println("age" +p[r]);
-                System.out.println("gender" +t[r]);
+                System.out.println("name"+" "+o[r]);
+                System.out.println("age" +" "+p[r]);
+                System.out.println("gender" +" "+t[r]);
                 if(d[i].equals(str4)){
                     System.out.println("Your seat is alloted");
                     System.out.println("B"+a[i]);
-                    System.out.println("Seat"+x[r]);
+                    System.out.println("Berth"+x[r]);
                 }
                 if(d[i].equals(str5)){
                     System.out.println("Your seat is alloted");
                     System.out.println("A"+a[i]);
-                    System.out.println("Seat"+x[r]);
+                    System.out.println("Berth"+x[r]);
                 }
                 if(d[i].equals(str6)){
                     System.out.println("Your seat is alloted");
                     System.out.println("H"+a[i]);
-                    System.out.println("Seat"+x[r]);
+                    System.out.println("Berth"+x[r]);
                 }
                 if(d[i].equals(str7)){
                     System.out.println("Your seat is alloted");
@@ -552,7 +547,7 @@ public class railwaysystem {
                 if(d[i].equals(str11)){
                     System.out.println("Your seat is alloted");
                     System.out.println("S"+a[i]);
-                    System.out.println("Seat"+x[r]);
+                    System.out.println("Berth"+x[r]);
                 }
                 if(d[i].equals(str12)){
                     System.out.println("Your seat is alloted");
@@ -560,11 +555,11 @@ public class railwaysystem {
                     System.out.println("Seat"+x[r]);
                 }
             }
-            System.out.println("  Source  "+y[i]);
-            System.out.println("  Destination  "+z[i]);
+            System.out.println(" Source  "+y[i]);
+            System.out.println(" Destination  "+z[i]);
             System.out.println(" Distance "+u[i]+"KM");
-            System.out.println(" Train no "+s[i]);
-            System.out.println("  Train name "+f[i]);
+            System.out.println(" Train no "+" "+s[i]);
+            System.out.println("  Train name "+" "+f[i]);
             if(b[i].equals(str1)){
                 System.out.println("  Train Category "+b[i]+"preminum");
             }
@@ -598,9 +593,8 @@ public class railwaysystem {
             if(d[i].equals(str12)){
                 System.out.println("   Coach Type   "+d[i]+" Second Sitting");
             }
-            
-            System.out.println("Date of journey is"+q[i]);
-            System.out.println("Total fare is including gst "+l[i]);
+            System.out.println("Date of journey is"+" "+q[i]);
+            System.out.println("Total fare is including gst "+" "+l[i]);
             
     }
     sc.close();
